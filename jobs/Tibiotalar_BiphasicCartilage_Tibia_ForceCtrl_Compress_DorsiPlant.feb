@@ -6118,7 +6118,7 @@
 		<step id="2" name="Step2">
 			<Control>
 				<analysis>TRANSIENT</analysis>
-				<time_steps>100</time_steps>
+				<time_steps>600</time_steps>
 				<step_size>0.01</step_size>
 				<solver>
 					<max_refs>15</max_refs>
@@ -6148,37 +6148,6 @@
 					<value lc="2">-333.62</value>
 					<load_type>1</load_type>
 				</rigid_constraint>
-			</Rigid>
-			<Constraints>
-			</Constraints>
-		</step>
-		<step id="3" name="Step3">
-			<Control>
-				<analysis>TRANSIENT</analysis>
-				<time_steps>500</time_steps>
-				<step_size>0.01</step_size>
-				<solver>
-					<max_refs>15</max_refs>
-					<max_ups>10</max_ups>
-					<diverge_reform>1</diverge_reform>
-					<reform_each_time_step>1</reform_each_time_step>
-					<dtol>0.001</dtol>
-					<etol>0.01</etol>
-					<rtol>0</rtol>
-					<ptol>0.01</ptol>
-					<lstol>0.9</lstol>
-					<min_residual>1e-20</min_residual>
-					<qnmethod>BFGS</qnmethod>
-					<mixed_formulation>default</mixed_formulation>
-				</solver>
-				<time_stepper>
-					<dtmin>0.005</dtmin>
-					<dtmax>0.01</dtmax>
-					<max_retries>5</max_retries>
-					<opt_iter>10</opt_iter>
-				</time_stepper>
-			</Control>
-			<Rigid>
 				<rigid_constraint name="Tibia Rotation Ctrl Dorsi/Plantarflexion" type="prescribe">
 					<rb>3</rb>
 					<dof>Rv</dof>
@@ -6201,18 +6170,18 @@
 		<load_controller id="2" type="loadcurve">
 			<interpolate>LINEAR</interpolate>
 			<points>
-				<point>0,0</point>
-				<point>1,1</point>
+				<point>1,0</point>
+				<point>2,1</point>
 			</points>
 		</load_controller>
 		<load_controller id="3" type="loadcurve">
 			<interpolate>LINEAR</interpolate>
 			<points>
-				<point>0,0</point>
-				<point>1,2</point>
 				<point>2,0</point>
-				<point>3.5,-3.5</point>
-				<point>5,0</point>
+				<point>3,-2</point>
+				<point>4,0</point>
+				<point>5.5,3.5</point>
+				<point>7,0</point>
 			</points>
 		</load_controller>
 	</LoadData>
