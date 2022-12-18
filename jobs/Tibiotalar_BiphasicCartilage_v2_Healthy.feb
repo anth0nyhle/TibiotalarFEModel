@@ -26,7 +26,7 @@
 				<ksi>4,4,4</ksi>
 			</solid>
 			<permeability type="perm-const-iso">
-				<perm>0.00082</perm>
+				<perm>0.000895</perm>
 			</permeability>
 		</material>
 		<material id="3" name="Tibial Plafond Bone" type="rigid body">
@@ -46,7 +46,7 @@
 				<ksi>4,4,4</ksi>
 			</solid>
 			<permeability type="perm-const-iso">
-				<perm>0.00082</perm>
+				<perm>0.000895</perm>
 			</permeability>
 		</material>
 	</Material>
@@ -14688,7 +14688,7 @@
 			<tolerance>0.2</tolerance>
 			<gaptol>0</gaptol>
 			<ptol>0</ptol>
-			<penalty>10</penalty>
+			<penalty>20</penalty>
 			<two_pass>0</two_pass>
 			<auto_penalty>0</auto_penalty>
 			<pressure_penalty>0</pressure_penalty>
@@ -14718,7 +14718,7 @@
 				<time_steps>700</time_steps>
 				<step_size>0.01</step_size>
 				<solver>
-					<max_refs>45</max_refs>
+					<max_refs>60</max_refs>
 					<max_ups>10</max_ups>
 					<diverge_reform>1</diverge_reform>
 					<reform_each_time_step>1</reform_each_time_step>
